@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kei Car Wash – Kei Group of Companies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f8fb;--surface:#fff;--ink:#0b2540;--muted:#52687d;--line:#d6e3ec;--navy:#0b2540;--aqua:#19c3d6;--cta:#ff7a1a;--cta-ink:#1b0e00;--tint:#e4f6f9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08151f;--surface:#0f2232;--ink:#e6f1f7;--muted:#97b0c2;--line:#1d3a50;--navy:#061018;--tint:#0f2d3a}}
+:root[data-theme="dark"]{--bg:#08151f;--surface:#0f2232;--ink:#e6f1f7;--muted:#97b0c2;--line:#1d3a50;--navy:#061018;--tint:#0f2d3a}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "DM Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:30}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navy);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font:800 1.2rem Sora,sans-serif;text-decoration:none;color:#fff}
+.logo span{color:var(--aqua)}
+.logo small{display:block;font:500 .62rem DM Sans,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#9fc3d3;margin-top:-2px}
+nav{display:flex;gap:6px}
+nav a{text-decoration:none;color:#c9dde8;padding:8px 14px;border-radius:999px;font-weight:500;font-size:.95rem}
+nav a:hover{color:#fff}
+nav a[aria-current="page"]{background:var(--aqua);color:#032028;font-weight:700}
+#menu{display:none;background:none;border:1px solid #35566c;color:#fff;border-radius:10px;padding:8px 12px;font:inherit;cursor:pointer}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--cta);color:var(--cta-ink);font:700 1rem "DM Sans",sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn.alt{background:transparent;color:#fff;border:2px solid #35566c}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--aqua);outline-offset:2px}
+.page{display:none}.page.on{display:block;animation:in .35s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{background:var(--navy);color:#fff;padding:76px 0 70px;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{font-size:clamp(2.2rem,6vw,3.9rem);max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--aqua)}
+.hero p{max-width:48ch;color:#b6cedb;font-size:1.1rem;margin:18px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.bub{position:absolute;border-radius:50%;border:2px solid rgba(25,195,214,.35);background:rgba(25,195,214,.08);animation:rise 9s infinite ease-in}
+.bub:nth-child(1){width:90px;height:90px;right:12%;bottom:-100px}
+.bub:nth-child(2){width:44px;height:44px;right:26%;bottom:-60px;animation-delay:2s}
+.bub:nth-child(3){width:130px;height:130px;right:3%;bottom:-140px;animation-delay:4s}
+.bub:nth-child(4){width:28px;height:28px;right:38%;bottom:-40px;animation-delay:6s}
+@keyframes rise{to{transform:translateY(-560px);opacity:0}}
+section{padding:58px 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:60ch}
+.pagehead{background:var(--tint);padding:46px 0;border-bottom:1px solid var(--line)}
+.pagehead h1{font-size:clamp(2rem,5vw,3rem)}
+.pagehead p{color:var(--muted);margin:10px 0 0;max-width:56ch}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card .ic{width:46px;height:46px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:1.5rem;margin-bottom:12px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted)}
+.card .from{margin-top:12px;font-weight:700}
+.band{background:var(--navy);color:#fff;text-align:center;padding:52px 0}
+.band p{color:#b6cedb;margin:8px 0 22px}
+.stats{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));text-align:center}
+.stats b{display:block;font:800 2.2rem Sora,sans-serif;color:var(--aqua)}
+.stats span{color:var(--muted);font-size:.95rem}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px}
+th,td{padding:15px 18px;text-align:left;border-bottom:1px solid var(--line)}
+th{font:700 .9rem Sora,sans-serif;background:var(--tint)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700}
+.note{color:var(--muted);font-size:.9rem;margin-top:12px}
+.two{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+form{display:grid;gap:12px}
+label{font-weight:700;font-size:.92rem;display:grid;gap:5px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 14px;width:100%}
+.est{background:var(--tint);border-radius:12px;padding:12px 16px;font-weight:700}
+.ok{color:#0a8a5a;font-weight:700;min-height:1.6em}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px}
+dt{font-weight:700}dd{margin:0;color:var(--muted)}
+.vals{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));padding:0;list-style:none;margin:0}
+.vals li{border-left:4px solid var(--aqua);padding:4px 0 4px 16px}
+.vals b{display:block}
+footer{background:var(--navy);color:#9fc3d3;padding:32px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{text-decoration:none;color:#c9dde8}
+@media (max-width:760px){#menu{display:block}nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--navy);flex-direction:column;padding:10px 20px 18px}nav.open{display:flex}.hero{padding:52px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#home">Kei <span>Car Wash</span><small>A Kei Group of Companies business</small></a>
+  <button id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#contact">Book &amp; Contact</a>
+  </nav>
+</div></header>
+
+<main>
+<!-- HOME -->
+<div class="page" id="home">
+  <div class="hero"><i class="bub"></i><i class="bub"></i><i class="bub"></i><i class="bub"></i>
+    <div class="wrap">
+      <h1>A cleaner car, <em>done right.</em></h1>
+      <p>Professional washing, valeting and detailing from Kei Group of Companies. Drive in, relax, and drive out to a car that shines inside and out.</p>
+      <div class="btns"><a class="btn" href="#contact">Book a wash</a><a class="btn alt" href="#pricing">See prices</a></div>
+    </div>
+  </div>
+  <section><div class="wrap">
+    <h2>Why drivers choose Kei</h2>
+    <p class="sub">Careful hands, quality products and honest pricing.</p>
+    <div class="grid">
+      <div class="card"><div class="ic" aria-hidden="true">💧</div><h3>Gentle on paint</h3><p>Clean water, soft mitts and pH-balanced shampoo protect your finish.</p></div>
+      <div class="card"><div class="ic" aria-hidden="true">⏱️</div><h3>Fast turnaround</h3><p>A standard wash is ready while you wait. Book ahead to skip the queue.</p></div>
+      <div class="card"><div class="ic" aria-hidden="true">🛡️</div><h3>Trusted brand</h3><p>Backed by Kei Group of Companies, with trained and supervised staff.</p></div>
+    </div>
+  </div></section>
+  <div class="band"><div class="wrap"><h2>Ready for a spotless ride?</h2><p>Choose a package, pick a time, and we will have your car ready.</p><a class="btn" href="#contact">Book now</a></div></div>
+</div>
+
+<!-- SERVICES -->
+<div class="page" id="services">
+  <div class="pagehead"><div class="wrap"><h1>Our services</h1><p>From a quick rinse to a full interior and exterior detail, there is a package for every car and budget.</p></div></div>
+  <section><div class="wrap"><div class="grid">
+    <div class="card"><div class="ic" aria-hidden="true">🚗</div><h3>Exterior wash</h3><p>Hand wash, wheel clean, tyre shine and streak-free dry.</p></div>
+    <div class="card"><div class="ic" aria-hidden="true">🧽</div><h3>Interior clean</h3><p>Vacuuming, dashboard and door wipe-down, mats and windows.</p></div>
+    <div class="card"><div class="ic" aria-hidden="true">✨</div><h3>Full valet</h3><p>Complete exterior and interior clean for a showroom look.</p></div>
+    <div class="card"><div class="ic" aria-hidden="true">🛠️</div><h3>Engine wash</h3><p>Safe degreasing and rinse of the engine bay.</p></div>
+    <div class="card"><div class="ic" aria-hidden="true">🌟</div><h3>Polish and wax</h3><p>Machine polish and protective wax for deep shine and water beading.</p></div>
+    <div class="card"><div class="ic" aria-hidden="true">🏢</div><h3>Fleet contracts</h3><p>Regular washing for company vehicles, taxis and delivery fleets at agreed rates.</p></div>
+  </div></div></section>
+</div>
+
+<!-- PRICING -->
+<div class="page" id="pricing">
+  <div class="pagehead"><div class="wrap"><h1>Pricing</h1><p>Simple prices in Uganda shillings, based on your vehicle size.</p></div></div>
+  <section><div class="wrap">
+    <div class="scroll"><table>
+      <thead><tr><th>Vehicle</th><th>Basic wash</th><th>Full wash</th><th>Premium valet</th></tr></thead>
+      <tbody>
+        <tr><td>Saloon / hatchback</td><td>UGX 15,000</td><td>UGX 30,000</td><td>UGX 60,000</td></tr>
+        <tr><td>SUV / pickup</td><td>UGX 20,000</td><td>UGX 40,000</td><td>UGX 80,000</td></tr>
+        <tr><td>Van / minibus</td><td>UGX 30,000</td><td>UGX 55,000</td><td>UGX 100,000</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note"><b>Basic</b> is an exterior wash. <b>Full</b> adds an interior clean. <b>Premium</b> adds polish and wax. Sample prices shown; confirm final rates with Kei Car Wash.</p>
+    <p style="margin-top:22px"><a class="btn" href="#contact">Book a package</a></p>
+  </div></section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="about">
+  <div class="pagehead"><div class="wrap"><h1>About Kei Car Wash</h1><p>Part of Kei Group of Companies, built on reliable service and respect for every customer.</p></div></div>
+  <section><div class="wrap">
+    <div class="two">
+      <div><h2>Our story</h2><p>Kei Car Wash was started to give drivers a dependable place to get their vehicles cleaned properly, without guesswork on price or quality. As a member of Kei Group of Companies, we hold ourselves to the same standards of honesty and professionalism as the wider group.</p><p>Every vehicle is checked in, cleaned by trained staff, and inspected before it is handed back to you.</p></div>
+      <div class="card"><div class="stats"><div><b>3</b><span>wash packages</span></div><div><b>6</b><span>services</span></div><div><b>7</b><span>days a week</span></div></div></div>
+    </div>
+  </div></section>
+  <section style="padding-top:0"><div class="wrap">
+    <h2>What we stand for</h2><p class="sub">Three promises we keep with every customer.</p>
+    <ul class="vals"><li><b>Care</b>We treat your car as if it were our own.</li><li><b>Honesty</b>Clear prices with no surprise charges.</li><li><b>Reliability</b>On time, every time, from booking to handover.</li></ul>
+  </div></section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="contact">
+  <div class="pagehead"><div class="wrap"><h1>Book and contact</h1><p>Request a slot and we will confirm by phone.</p></div></div>
+  <section><div class="wrap"><div class="two">
+    <form id="form">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Phone number<input name="phone" type="tel" required placeholder="07XX XXX XXX" autocomplete="tel"></label>
+      <label>Vehicle type<select id="veh" name="veh"><option value="0">Saloon / hatchback</option><option value="1">SUV / pickup</option><option value="2">Van / minibus</option></select></label>
+      <label>Package<select id="pkg" name="pkg"><option value="0">Basic wash</option><option value="1">Full wash</option><option value="2">Premium valet</option></select></label>
+      <label>Preferred date<input name="date" type="date" required></label>
+      <div class="est" id="est" aria-live="polite"></div>
+      <button class="btn" type="submit">Request booking</button>
+      <div class="ok" id="ok" role="status"></div>
+    </form>
+    <div>
+      <h2>Visit us</h2>
+      <dl>
+        <dt>Location</dt><dd>[Add your street address], Uganda</dd>
+        <dt>Phone</dt><dd>[Add phone number]</dd>
+        <dt>Email</dt><dd>[Add email address]</dd>
+        <dt>Hours</dt><dd>[Add opening hours]</dd>
+      </dl>
+      <p class="note">Replace the bracketed details with your real contact information before sharing the site.</p>
+    </div>
+  </div></div></section>
+</div>
+</main>
+
+<footer><div class="wrap"><span>© Kei Group of Companies. Kei Car Wash.</span><span><a href="#home">Home</a> · <a href="#services">Services</a> · <a href="#pricing">Pricing</a> · <a href="#about">About</a> · <a href="#contact">Contact</a></span></div></footer>
+
+<script>
+const IDS=["home","services","pricing","about","contact"];
+const P=[[15000,30000,60000],[20000,40000,80000],[30000,55000,100000]];
+const $=s=>document.querySelector(s),nav=$("#nav"),btn=$("#menu");
+function route(){
+ let h=location.hash.slice(1);if(!IDS.includes(h))h="home";
+ IDS.forEach(i=>$("#"+i).classList.toggle("on",i===h));
+ nav.querySelectorAll("a").forEach(a=>{a.getAttribute("href")==="#"+h?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
+ nav.classList.remove("open");btn.setAttribute("aria-expanded","false");window.scrollTo(0,0)}
+btn.onclick=()=>{const o=nav.classList.toggle("open");btn.setAttribute("aria-expanded",o)};
+window.addEventListener("hashchange",route);route();
+function est(){$("#est").textContent="Estimated price: UGX "+P[$("#veh").value][$("#pkg").value].toLocaleString("en-UG")}
+$("#veh").onchange=$("#pkg").onchange=est;est();
+$("#form").addEventListener("submit",e=>{e.preventDefault();
+ $("#ok").textContent="Thank you, "+e.target.name.value.trim()+". We will call "+e.target.phone.value.trim()+" to confirm your slot.";e.target.reset();est()});
+</script>
+</body>
+</html>
